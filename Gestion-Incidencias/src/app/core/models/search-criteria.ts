@@ -1,5 +1,10 @@
 import { incident_status } from "./incident.model";
 
+/**
+ * 
+ * clase que construlle el buscador general
+ * 
+ */
 export class SearchCriteria {
 
   constructor(

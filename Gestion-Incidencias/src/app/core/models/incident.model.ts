@@ -1,3 +1,9 @@
+/**
+ * 
+ * este archivo define el modelo que deben seguir los datos de los registros de incidentes
+ * 
+ */
+
 export type incident_status =
     | 'open'
     | 'in progres'

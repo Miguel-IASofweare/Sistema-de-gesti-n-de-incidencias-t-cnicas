@@ -1,3 +1,9 @@
+/**
+ * 
+ * interfaz que define cuales son los datos que pide el sistema para
+ * definir un usuer
+ * 
+ */
 export interface user {
 
     readonly id_user: number;

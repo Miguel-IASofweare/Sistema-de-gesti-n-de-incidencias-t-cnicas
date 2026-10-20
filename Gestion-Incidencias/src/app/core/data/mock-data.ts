@@ -2,6 +2,11 @@ import { user } from "../models/user.model";
 import { incident } from "../models/incident.model";
 import { email } from "@angular/forms/signals";
 
+/**
+ * 
+ * datos de prueba para revisar que todas las interface esten funcionando correctamente
+ * 
+ */
 export const USERS: user[] = [
 
     {
