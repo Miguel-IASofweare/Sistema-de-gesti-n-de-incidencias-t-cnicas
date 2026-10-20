@@ -1,0 +1,63 @@
+import { user } from "../models/user.model";
+import { incident } from "../models/incident.model";
+import { email } from "@angular/forms/signals";
+
+/**
+ * 
+ * datos de prueba para revisar que todas las interface esten funcionando correctamente
+ * 
+ */
+export const USERS: user[] = [
+
+    {
+
+        id_user: 1,
+        name_user: "Miguel Angel",
+        email_user: "miguel@ias.com.co",
+        active_user: true
+
+    },
+
+    {
+
+        id_user: 2,
+        name_user: "Nini Garcia",
+        email_user: "nini@gmail.com",
+        active_user: false
+
+    },
+
+    {
+
+        id_user: 3,
+        name_user: "Elizabeth Montes",
+        email_user: "ElizabethCarmen@gamil.com",
+        active_user: true
+
+    }
+
+];
+
+export const INCIDENTS: incident[] = [
+  {
+    id_incidencia: 1,
+    titulo_incidencia: 'Error Login',
+    descripcion_incidencia: 'No permite iniciar sesión',
+    estado_incidencia: 'open',
+    prioridad_incidencia: 'most low'
+  },
+  {
+    id_incidencia: 2,
+    titulo_incidencia: 'Error API',
+    descripcion_incidencia: 'Falla comunicación',
+    estado_incidencia: 'open',
+    prioridad_incidencia: 'most low'
+  },
+  {
+    id_incidencia: 3,
+    titulo_incidencia: 'Error Base Datos',
+    descripcion_incidencia: 'Conexión perdida',
+    estado_incidencia: 'open',
+    prioridad_incidencia: 'most low'
+  }
+];
