@@ -32,3 +32,27 @@ export const USERS: user[] = [
     }
 
 ];
+
+export const INCIDENTS: incident[] = [
+  {
+    id_incidencia: 1,
+    titulo_incidencia: 'Error Login',
+    descripcion_incidencia: 'No permite iniciar sesión',
+    estado_incidencia: 'open',
+    prioridad_incidencia: 'most low'
+  },
+  {
+    id_incidencia: 2,
+    titulo_incidencia: 'Error API',
+    descripcion_incidencia: 'Falla comunicación',
+    estado_incidencia: 'open',
+    prioridad_incidencia: 'most low'
+  },
+  {
+    id_incidencia: 3,
+    titulo_incidencia: 'Error Base Datos',
+    descripcion_incidencia: 'Conexión perdida',
+    estado_incidencia: 'open',
+    prioridad_incidencia: 'most low'
+  }
+];
