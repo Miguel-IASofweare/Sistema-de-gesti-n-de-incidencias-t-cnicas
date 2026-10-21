@@ -1,1 +1,21 @@
-<p>header works!</p>
+<h1>{{ titulo }}</h1>
+<h1>{{ usuario }}</h1>
+
+<button (click)="cambiarTitulo()">
+
+  Cambiar título
+
+</button>
+
+<button (click)="toggleSeccion()">
+  Mostrar/Ocultar
+</button>
+
+@if (mostrarSeccion) {
+  <p>Esta sección puede ocultarse</p>
+}
+
+<button
+  [disabled]="botonDeshabilitado">
+  Guardar
+</button>
