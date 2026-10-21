@@ -40,24 +40,39 @@ export const USERS: user[] = [
 
 export const INCIDENTS: incident[] = [
   {
-    id_incidencia: 1,
-    titulo_incidencia: 'Error Login',
-    descripcion_incidencia: 'No permite iniciar sesión',
-    estado_incidencia: 'open',
-    prioridad_incidencia: 'most low'
+    id: 'INC-001',
+    title: 'Error de inicio de sesión',
+    description: 'Los usuarios no pueden iniciar sesión en la plataforma.',
+    category: 'Autenticación',
+    priority: 'HIGH',
+    status: 'OPEN',
+    reporterId: 'USER-001',
+    assignedAgentId: 'AGENT-001',
+    createdAt: '2026-10-21T08:00:00Z',
+    updatedAt: '2026-10-21T08:00:00Z'
   },
   {
-    id_incidencia: 2,
-    titulo_incidencia: 'Error API',
-    descripcion_incidencia: 'Falla comunicación',
-    estado_incidencia: 'open',
-    prioridad_incidencia: 'most low'
+    id: 'INC-002',
+    title: 'Fallo en la API de clientes',
+    description: 'La API devuelve error 500 al consultar clientes.',
+    category: 'Backend',
+    priority: 'CRITICAL',
+    status: 'IN_PROGRES',
+    reporterId: 'USER-002',
+    assignedAgentId: 'AGENT-002',
+    createdAt: '2026-10-20T14:30:00Z',
+    updatedAt: '2026-10-21T09:15:00Z'
   },
   {
-    id_incidencia: 3,
-    titulo_incidencia: 'Error Base Datos',
-    descripcion_incidencia: 'Conexión perdida',
-    estado_incidencia: 'open',
-    prioridad_incidencia: 'most low'
+    id: 'INC-003',
+    title: 'Pérdida de conexión con la base de datos',
+    description: 'La aplicación pierde la conexión después de varios minutos de uso.',
+    category: 'Base de Datos',
+    priority: 'MEDIUM',
+    status: 'RESOLVED',
+    reporterId: 'USER-003',
+    assignedAgentId: 'AGENT-001',
+    createdAt: '2026-10-19T10:45:00Z',
+    updatedAt: '2026-10-20T16:20:00Z'
   }
 ];
