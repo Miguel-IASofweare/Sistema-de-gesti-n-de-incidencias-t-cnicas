@@ -4,23 +4,29 @@
  * 
  */
 
-export type incident_status =
-    | 'open'
-    | 'in progres'
-    | 'clouse';
+export type IncidentStatus =
+    | 'OPEN'
+    | 'IN_PROGRES'
+    | 'RESOLVED'
+    | 'CLOSED';
 
-export type incident_priority =
-    | 'low'
-    | 'most low'
-    | 'emergenci'
-    | 'most dangerous'
+export type IncidentPriority =
+    | 'LOW'
+    | 'MEDIUM'
+    | 'HIGH'
+    | 'CRITICAL';
 
 export interface incident {
 
-    readonly id_incidencia: number;
-    titulo_incidencia: string;
-    descripcion_incidencia: string;
-    estado_incidencia: incident_status;
-    prioridad_incidencia: incident_priority;
+    readonly id: string;
+    title: string;
+    description: string;
+    category: string;
+    priority: IncidentPriority;
+    status: IncidentStatus;
+    reporterId: string;
+    assignedAgentId: string;
+    createdAt: string;
+    updatedAt: string;
 
 }
