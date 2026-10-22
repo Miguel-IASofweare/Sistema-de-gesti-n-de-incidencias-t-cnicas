@@ -1,21 +1,74 @@
-<h1>{{ titulo }}</h1>
-<h1>{{ usuario }}</h1>
+<!-- header principal -->
+<div class="header-container">
+  <h1>{{ titulo }}</h1>
+  <h1>{{ usuario }}</h1>
+  <div class="acciones">
+    <button (click)="cambiarTitulo()">
+      Cambiar título
+    </button>
 
-<button (click)="cambiarTitulo()">
+    <!-- boton para ocultar las incidencias -->
+    <button (click)="toggleSeccion()">
+      Mostrar/Ocultar
+    </button>
+  </div>
+</div>
 
-  Cambiar título
+<h2>Listado de incidencias:</h2>
 
-</button>
-
-<button (click)="toggleSeccion()">
-  Mostrar/Ocultar
-</button>
-
+<!-- si el boton (click)="toggleSeccion()" esta en true, mostrara todas las incidencias regrisradas -->
 @if (mostrarSeccion) {
-  <p>Esta sección puede ocultarse</p>
+  @for (incidencia of incidencias; track incidencia.id) {
+
+    <!-- estructura general de la informacion de las incidencias -->
+    <div class="card-incidencia">
+      <h3>{{ incidencia.title }}</h3>
+      <p>
+        {{ incidencia.description }}
+      </p>
+
+      @switch (incidencia.status) {
+        @case ('OPEN'){
+          <span class="estado-open">
+            🔴 ABIERTA
+          </span>
+        }
+        @case ( 'IN_PROGRES' ){
+          <span class="estado-progress">
+            🟡 EN PROCESO
+          </span>
+        }
+        @case ( 'RESOLVED' ){
+          <span class="estado-resolved">
+            🟢 RESUELTA
+          </span>
+        }
+      }
+
+      @switch (incidencia.priority) {
+        @case ('CRITICAL') {
+          <p>🚨 CRÍTICA</p>
+        }
+        @case ('HIGH') {
+          <p>🔴 ALTA</p>
+        }
+        @case ('MEDIUM') {
+          <p>🟡 MEDIA</p>
+        }
+        @case ('LOW') {
+          <p>🟢 BAJA</p>
+        }
+      }
+    </div>
+  }@empty {
+    <p>No hay incidencias registradas.</p>
+  }
+}@else {
+  <p>
+    El listado de incidencias está oculto.
+  </p>
 }
 
-<button
-  [disabled]="botonDeshabilitado">
+<button [disabled]="botonDeshabilitado">
   Guardar
 </button>
