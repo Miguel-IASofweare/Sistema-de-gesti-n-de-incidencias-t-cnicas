@@ -1,3 +1,23 @@
 h1 {
   color: rgb(69, 4, 112);
 }
+.estado-open {
+  color: red;
+  font-weight: bold;
+}
+
+.estado-progress {
+  color: orange;
+  font-weight: bold;
+}
+
+.estado-resolved {
+  color: green;
+  font-weight: bold;
+}
+.card-incidencia {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
