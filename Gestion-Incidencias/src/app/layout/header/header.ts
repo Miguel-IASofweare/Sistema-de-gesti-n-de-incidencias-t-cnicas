@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { INCIDENTS } from '../../core/data/mock-data';
 
 @Component({
   imports: [],
@@ -13,10 +14,11 @@ export class Header {
   usuario = 'miguel';
   mostrarSeccion = true;
   botonDeshabilitado = false;
+  incidencias =  INCIDENTS;
 
   cambiarTitulo(): void {
 
-    this.titulo = '¡Título cambiado!';
+    this.titulo = 'esta es nuestra lista de incidencias';
 
   }
 

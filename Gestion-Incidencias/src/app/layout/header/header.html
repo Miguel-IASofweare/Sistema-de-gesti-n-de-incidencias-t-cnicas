@@ -2,9 +2,7 @@
 <h1>{{ usuario }}</h1>
 
 <button (click)="cambiarTitulo()">
-
   Cambiar título
-
 </button>
 
 <button (click)="toggleSeccion()">
@@ -12,9 +10,26 @@
 </button>
 
 @if (mostrarSeccion) {
-  <p>Esta sección puede ocultarse</p>
-}
+  <h2>Listado de incidencias</h2>
 
+  @for (incidencia of incidencias; track incidencia.id) {
+
+    <div>
+
+      <h3>{{ incidencia.title }}</h3>
+
+      <p>
+        {{ incidencia.description }}
+      </p>
+
+    </div>
+
+  } @empty {
+
+    <p>No hay incidencias registradas.</p>
+
+  }
+}
 <button
   [disabled]="botonDeshabilitado">
   Guardar
