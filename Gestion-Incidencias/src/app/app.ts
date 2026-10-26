@@ -8,7 +8,7 @@ import { incident } from './core/models/incident.model';
 @Component({
 
   imports: [
-    Header, 
+    Header,
     Footer,
     IncidentList
   ],

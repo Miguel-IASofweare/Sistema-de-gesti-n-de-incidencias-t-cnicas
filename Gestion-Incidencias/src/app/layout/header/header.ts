@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { UserInfo } from '../../shared/user-info/user-info';
 
 @Component({
-  imports: [],
+  imports: [UserInfo],
   selector: 'app-header',
   styleUrl: './header.scss',
   templateUrl: './header.html',
@@ -10,7 +11,7 @@ import { Component } from '@angular/core';
 export class Header {
 
   titulo = 'Gestion de incidencias';
-  usuario = 'miguel';
+  usuario = 'UserInfo';
   botonDeshabilitado = false;
 
   cambiarTitulo(): void {
