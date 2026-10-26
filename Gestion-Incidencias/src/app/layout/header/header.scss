@@ -41,3 +41,17 @@ button:disabled {
   cursor: not-allowed;
 }
 
+button:focus {
+
+  outline: 3px solid
+      var(--color-primary);
+
+}
+
+button:disabled {
+
+  opacity: .5;
+
+  cursor: not-allowed;
+
+}
