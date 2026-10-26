@@ -1,28 +1,3 @@
-//modificador de estilo  de los estados
-//abierto
-.estado-open {
-  color: red;
-  font-weight: bold;
-}
-//en progreso
-.estado-progress {
-  color: orange;
-  font-weight: bold;
-}
-//resuelto
-.estado-resolved {
-  color: green;
-  font-weight: bold;
-}
-
-//modificador de estilo de los cards que atrapan incidencias
-.card-incidencia {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 12px;
-  margin-bottom: 12px;
-}
-
 //modificador de estilo de los card que atrapan el header
 .header-container {
   background: #1e293b;
@@ -46,3 +21,23 @@
   display: flex;
   gap: 10px;
 }
+
+//modificador de estilo de los botones 
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+

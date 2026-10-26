@@ -1,0 +1,26 @@
+ <div>
+ <!-- boton para ocultar las incidencias -->
+    <button (click)="toggleSeccion()">
+      Mostrar/Ocultar
+    </button>
+
+<h2>Listado de incidencias:</h2>
+
+<!-- si el boton (click)="toggleSeccion()" esta en true, mostrara todas las incidencias regrisradas -->
+@if (mostrarSeccion) {
+
+@for (incidencia of incidencias; track incidencia.id) {
+
+  <app-incident-card
+    [incident]="incidencia"
+    (selected)="onSelected($event)">
+  </app-incident-card>
+
+}
+
+}@else {
+  <p>
+    El listado de incidencias está oculto.
+  </p>
+}
+ </div>

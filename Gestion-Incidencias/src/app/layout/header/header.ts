@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { INCIDENTS } from '../../core/data/mock-data';
+import { UserInfo } from '../../shared/user-info/user-info';
 
 @Component({
-  imports: [],
+  imports: [UserInfo],
   selector: 'app-header',
   styleUrl: './header.scss',
   templateUrl: './header.html',
@@ -11,21 +11,13 @@ import { INCIDENTS } from '../../core/data/mock-data';
 export class Header {
 
   titulo = 'Gestion de incidencias';
-  usuario = 'miguel';
-  mostrarSeccion = true;
+  usuario = 'UserInfo';
   botonDeshabilitado = false;
-  incidencias =  INCIDENTS;
 
   cambiarTitulo(): void {
 
     this.titulo = 'esta es nuestra lista de incidencias';
 
-  }
-
-  toggleSeccion(): void {
-  
-    this.mostrarSeccion = !this.mostrarSeccion;
-  
   }
 
 }
