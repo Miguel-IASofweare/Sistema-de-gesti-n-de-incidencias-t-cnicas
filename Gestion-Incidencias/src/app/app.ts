@@ -1,15 +1,16 @@
 import { Component, signal } from '@angular/core';
 import { Header } from './layout/header/header';
 import { Footer } from './layout/footer/footer';
-import { UserInfo } from './shared/user-info/user-info';
 import { INCIDENTS } from './core/data/mock-data';
+import { IncidentList } from './features/incident-list/incident-list';
+import { incident } from './core/models/incident.model';
 
 @Component({
 
   imports: [
     Header, 
     Footer,
-    UserInfo
+    IncidentList
   ],
 
   selector: 'app-root',

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { INCIDENTS } from '../../core/data/mock-data';
 
 @Component({
   imports: [],
@@ -6,4 +7,15 @@ import { Component } from '@angular/core';
   styleUrl: './incident-list.scss',
   templateUrl: './incident-list.html',
 })
-export class IncidentList {}
+export class IncidentList {
+
+  mostrarSeccion = true;
+  incidencias =  INCIDENTS;
+
+  toggleSeccion(): void {
+  
+    this.mostrarSeccion = !this.mostrarSeccion;
+  
+  }
+
+}
