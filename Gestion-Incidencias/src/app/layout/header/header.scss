@@ -46,3 +46,79 @@
   display: flex;
   gap: 10px;
 }
+
+//modificador de estilo de los botones 
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+//modificador de estilos para las cards de las incidencias
+.card-incidencia {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.estado-open,
+.estado-progress,
+.estado-resolved {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.estado-open {
+  background: #fee2e2;
+  color: #dc2626;
+}
+.estado-progress {
+  background: #fef3c7;
+  color: #d97706;
+}
+.estado-resolved {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.prioridad-critical {
+  background: #7f1d1d;
+  color: white;
+}
+
+.prioridad-high {
+  background: #dc2626;
+  color: white;
+}
+
+.prioridad-medium {
+  background: #f59e0b;
+  color: white;
+}
+
+.prioridad-low {
+  background: #22c55e;
+  color: white;
+}

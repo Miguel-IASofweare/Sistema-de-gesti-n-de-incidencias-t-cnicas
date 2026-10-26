@@ -22,11 +22,13 @@
 
     <!-- estructura general de la informacion de las incidencias -->
     <div class="card-incidencia">
+      <div class="badges"></div>
       <h3>{{ incidencia.title }}</h3>
       <p>
         {{ incidencia.description }}
       </p>
 
+      <!-- condicional del estado de la incidencia -->
       @switch (incidencia.status) {
         @case ('OPEN'){
           <span class="estado-open">
@@ -45,6 +47,7 @@
         }
       }
 
+      <!-- condicional de la prioridad de la incidencia -->
       @switch (incidencia.priority) {
         @case ('CRITICAL') {
           <p>🚨 CRÍTICA</p>

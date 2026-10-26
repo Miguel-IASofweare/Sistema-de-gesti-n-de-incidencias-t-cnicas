@@ -1,5 +1,4 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { Header } from './layout/header/header';
 import { Footer } from './layout/footer/footer';
 import { UserInfo } from './shared/user-info/user-info';
@@ -8,7 +7,6 @@ import { INCIDENTS } from './core/data/mock-data';
 @Component({
 
   imports: [
-    RouterOutlet, 
     Header, 
     Footer,
     UserInfo
