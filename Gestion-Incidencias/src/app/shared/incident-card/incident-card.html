@@ -1,11 +1,6 @@
-<div class="card-incidencia">
-    <h3>{{ incident().title }}</h3>
-    <p>{{ incident().description }}</p>
-</div>
-
  <!-- selector del estado de la incidencia -->
 <div class="card-incidencia">
-  <h3>{{ incident().title }}</h3>
+  <h3>{{ incident().title | titlecase  }}</h3>
   <p>
     {{ incident().description }}
   </p>
@@ -41,5 +36,10 @@
     @case ('LOW') {
       <p>🟢 BAJA</p>
     }
+
   }
+  <p>
+    Fecha creación:
+    {{ incident().createdAt | date:'dd/MM/yyyy' }}
+  </p>
 </div>
