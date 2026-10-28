@@ -1,6 +1,6 @@
 import { Component, input, output } from '@angular/core';
 import { incident } from '../../core/models/incident.model';
-import { TitleCasePipe, DatePipeConfig, DatePipe } from '@angular/common';
+import { TitleCasePipe, DatePipe } from '@angular/common';
 
 @Component({
   imports: [TitleCasePipe, DatePipe],
