@@ -1,5 +1,8 @@
  <!-- selector del estado de la incidencia -->
-<div class="card-incidencia">
+<div class="card-incidencia"
+  appHighlightCritical
+  [isCritical]="incident().priority === 'CRITICAL'">
+  <article tabindex="0">
   <h3>{{ incident().title | titlecase  }}</h3>
   <p>
     {{ incident().description }}
@@ -42,4 +45,5 @@
     Fecha creación:
     {{ incident().createdAt | date:'dd/MM/yyyy' }}
   </p>
+  </article>
 </div>
