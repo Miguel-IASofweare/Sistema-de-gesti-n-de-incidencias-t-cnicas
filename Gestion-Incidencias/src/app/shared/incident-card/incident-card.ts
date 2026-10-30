@@ -1,9 +1,10 @@
 import { Component, input, output } from '@angular/core';
 import { incident } from '../../core/models/incident.model';
 import { TitleCasePipe, DatePipe } from '@angular/common';
+import { HighlightCritical } from '../directives/highlight-critical';
 
 @Component({
-  imports: [TitleCasePipe, DatePipe],
+  imports: [TitleCasePipe, DatePipe, HighlightCritical],
   selector: 'app-incident-card',
   styleUrl: './incident-card.scss',
   templateUrl: './incident-card.html',
