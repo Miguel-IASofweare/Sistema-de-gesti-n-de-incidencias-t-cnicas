@@ -8,23 +8,22 @@ import {
 
 @Directive({
   selector: '[appHighlightCritical]',
-  standalone: true
+  standalone: true,
 })
 export class HighlightCritical {
 
   @Input()
   isCritical = false;
 
-  @HostBinding('style.border')
-  border = '';
+  @HostBinding('class.highlight-critical')
+  isHighligthted = false;
 
   @HostListener('mouseenter')
   onMouseEnter(): void {
 
     if (this.isCritical) {
 
-      this.border =
-        '3px solid red';
+      this.isHighligthted = true;
 
     }
 
@@ -33,8 +32,10 @@ export class HighlightCritical {
   @HostListener('mouseleave')
   onMouseLeave(): void {
 
-    this.border = '';
+    this.isHighligthted = false ;
 
   }
+
+  
 
 }

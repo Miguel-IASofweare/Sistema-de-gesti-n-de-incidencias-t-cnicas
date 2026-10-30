@@ -1,0 +1,7 @@
+.highlight-critical {
+
+  border: 3px solid red;
+
+  transition: all .2s ease;
+
+}
